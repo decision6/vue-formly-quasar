@@ -1,15 +1,30 @@
 {
   "name": "vue-formly-quasar",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "dist/vue-formly-quasar.js",
+  "author": "D6 Team <tecnologia@decision6.com>",
   "license": "MIT",
   "description": "A theme for Vue Formly using Quasar Components",
+  "scripts": {
+    "build": "./node_modules/.bin/webpack"
+  },
   "peerDependencies": {
-    "quasar-framework": "^0.14.1",
+    "quasar-framework": "^0.14.2",
+    "vue": "^2.4.2",
     "vue-formly": "^2.4.6"
   },
   "dependencies": {
     "lodash": "^4.17.4",
     "ramda": "^0.24.1"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-syntax-object-rest-spread": "^6.13.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.6.0",
+    "eslint-loader": "^1.9.0",
+    "vue-loader": "^13.0.4",
+    "webpack": "^3.5.6"
   }
 }

@@ -1,4 +1,4 @@
-import { QSelect } from 'quasar'
+import { QSelect } from 'quasar-framework'
 import { returnPlainObject } from '../../helpers'
 import { returnProps } from '../../common'
 

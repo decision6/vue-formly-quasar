@@ -1,0 +1,14 @@
+### Project ###
+# Node
+.node_modules/
+.npmignore
+yarn.lock
+yarn-error.log
+
+# Webpack
+webpack.config.js
+
+# Other
+.babelrc
+.eslintrc
+.gitignore

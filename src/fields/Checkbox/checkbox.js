@@ -1,4 +1,4 @@
-import { QCheckbox } from 'quasar'
+import { QCheckbox } from 'quasar-framework'
 import { returnProps, optionValueToVal } from '../../common'
 
 /**
