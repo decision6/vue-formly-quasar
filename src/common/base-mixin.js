@@ -46,14 +46,12 @@ export default {
   },
   computed: {
     hasError () {
-      if (this.form[ this.field.key ].$dirty === false || this.form[ this.field.key ].$active === true) {
+      const field = this.form[ this.field.key ]
+      if (field.$dirty === false || field.$active === true) {
         return false
       }
-      let errors = this.form.$errors[ this.field.key ]
-      let hasErrors = false
-      Object.keys(errors).forEach(err => {
-        if (errors[err] !== false) hasErrors = true
-      })
+      const errors = Object.values(this.form.$errors[ this.field.key ])
+      const hasErrors = errors.some(err => err === true)
       this.$set(this.form[ this.field.key ], '$hasError', hasErrors)
       return hasErrors
     }

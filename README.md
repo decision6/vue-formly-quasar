@@ -2,6 +2,8 @@
 
 Theme for [Vue Formly](https://github.com/formly-js/vue-formly) using [Quasar components](http://quasar-framework.org/components/).
 
+**Sugestion**: for formly-js wrapper, use [QFormly](https://github.com/decision6/q-formly) plugin.
+
 ## Requirements
 
 The plugin depends:
@@ -19,17 +21,19 @@ On `main.js` on Quasar template:
 import Vue from 'vue'
 import Quasar from 'quasar'
 import VueFormly from 'vue-formly'
-import QFormly from 'vue-formly-quasar'
+import VueFormlyQuasar from 'vue-formly-quasar'
+import QFormly from 'q-formly'
 
 // Install plugins
 Vue.use(Quasar)
 Vue.use(VueFormly)
+Vue.use(VueFormlyQuasar)
 Vue.use(QFormly)
 
 // code below
 ```
 
-It's very important that `VueFormly` plugin has been install before `QFormly` plugin.
+It's very important that `VueFormly` plugin has been install before `VueFormly` plugin.
 
 ## Usage
 
