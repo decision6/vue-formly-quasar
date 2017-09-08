@@ -5,12 +5,12 @@
  * @return {Object}
  */
 export default (context, option) => {
+  const props = Object.assign({
+    value: context.model[context.field.key],
+    error: context.hasError
+  }, option)
   return {
-    props: {
-      value: context.model[context.field.key],
-      ...option,
-      error: context.hasError
-    },
+    props,
     on: {
       input: value => {
         context.model[context.field.key] = value

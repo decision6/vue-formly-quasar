@@ -10,8 +10,6 @@ import { returnPlainObject } from '../helpers'
  */
 export default (h, context, item) => {
   const fieldDefinitions = returnPlainObject(context.to.field)
-  const props = {
-    ...fieldDefinitions
-  }
+  const props = Object.assign({ }, fieldDefinitions)
   return h(QField, { props }, [ item ])
 }
