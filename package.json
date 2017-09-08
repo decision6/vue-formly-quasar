@@ -1,0 +1,15 @@
+{
+  "name": "vue-formly-quasar",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "description": "A theme for Vue Formly using Quasar Components",
+  "peerDependencies": {
+    "quasar-framework": "^0.14.1",
+    "vue-formly": "^2.4.6"
+  },
+  "dependencies": {
+    "lodash": "^4.17.4",
+    "ramda": "^0.24.1"
+  }
+}
