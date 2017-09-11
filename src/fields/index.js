@@ -5,6 +5,7 @@ import optiongroup from './OptionGroup'
 import range from './Range'
 import toggle from './Toggle'
 import select from './Select'
+import multipleInput from './MultipleInput'
 
 export default {
   input,
@@ -13,5 +14,6 @@ export default {
   range,
   toggle,
   select,
-  'option-group': optiongroup
+  'option-group': optiongroup,
+  'multiple-input': multipleInput
 }
