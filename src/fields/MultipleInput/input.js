@@ -1,7 +1,7 @@
 import { QInput } from 'quasar-framework'
 import { returnPlainObject } from '../../helpers'
 import { Button, Icon } from '../../common'
-import { defaultsDeep } from 'lodash'
+import { defaultsDeep, isEmpty } from 'lodash'
 
 const returnPropsToArray = (context, option, index) => {
   const array = context.model[context.field.key]
@@ -65,7 +65,11 @@ export default (h, context) => {
   })
 
   const handlerClick = event => {
-    context.model[context.field.key].push('')
+    const array = context.model[context.field.key]
+    const hasItemEmpty = array.some(item => isEmpty(item))
+    if (!hasItemEmpty) {
+      array.push('')
+    }
   }
 
   return h('div', [ ...inputs, Button(h, btnProps, handlerClick, [ icon ]) ])
