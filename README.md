@@ -247,3 +247,35 @@ The other properties will be inject in the component except the field property.
   }
 }
 ```
+
+### templateOptions for input multiple
+
++ **field**: the same that was presented before
++ **input**: the properties for `QInput` element
+
+The difference is on `model`. For this field type, is necessary that key has an array of strings. Seja para inputs do tipo text, number, password, não importa.
+
+#### Example
+
+```js
+// on model object
+model: {
+  // ...
+  emails: [ 'examplemail@test.com' ]
+}
+
+// on fields array
+{
+  key: 'emails',
+  type: 'multiple-input',
+  templateOptions: {
+    field: {
+      label: 'Emails for list',
+      'label-width': 3
+    },
+    input: {
+      type: 'email'
+    }
+  }
+}
+```

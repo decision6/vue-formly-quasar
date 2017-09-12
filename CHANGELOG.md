@@ -9,3 +9,7 @@ All notable changes to this project will be documented in this file.
 ## [1.1.0] - 2017-09-08
 
 + Replace spread use for Object.assign for better compatibility
+
+## [1.2.0] - 2017-09-12
+
++ [ new ] New field: `multiple input`
