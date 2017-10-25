@@ -1,3 +1,4 @@
+import autocomplete from './Autocomplete'
 import input from './Input'
 import radio from './Radio'
 import checkbox from './Checkbox'
@@ -8,6 +9,7 @@ import select from './Select'
 import multipleInput from './MultipleInput'
 
 export default {
+  autocomplete,
   input,
   radio,
   checkbox,

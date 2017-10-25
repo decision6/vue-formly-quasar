@@ -4,13 +4,14 @@ import { returnProps } from '../../common'
 
 /**
  * Render a input component
- * @param  {Function} h     createElement function
- * @param  {Object} context
- * @param  {Object} item    vue component
- * @return {Object}         vue component
+ * @param  {Function} h        createElement function
+ * @param  {Object}   context
+ * @param  {Object}   item     vue component
+ * @param  {Array}    children
+ * @return {Object}            vue component
  */
-export default (h, context) => {
+export default (h, context, children = []) => {
   const inputDefinitions = returnPlainObject(context.to.input)
   const props = returnProps(context, inputDefinitions)
-  return h(QInput, props)
+  return h(QInput, props, children)
 }
