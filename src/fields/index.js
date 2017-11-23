@@ -7,6 +7,7 @@ import range from './Range'
 import toggle from './Toggle'
 import select from './Select'
 import multipleInput from './MultipleInput'
+import datetime from './DateTime'
 
 export default {
   autocomplete,
@@ -16,6 +17,7 @@ export default {
   range,
   toggle,
   select,
+  datetime,
   'option-group': optiongroup,
   'multiple-input': multipleInput
 }
