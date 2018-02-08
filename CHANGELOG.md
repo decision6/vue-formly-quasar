@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.4.0] - 2018-02-08
+
+- [ upgrade ] babel
+
 ## [1.3.0] - 2018-02-08
 
 + [ update ] deps and babel configuration
