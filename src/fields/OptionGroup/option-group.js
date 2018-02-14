@@ -9,8 +9,8 @@ import { returnProps } from '../../common'
  * @param  {Object} item    vue component
  * @return {Object}         vue component
  */
-export default (h, context, options) => {
-  const optionGroupDefinitions = returnPlainObject(options)
+export default (h, context) => {
+  const optionGroupDefinitions = returnPlainObject(context.to.option_group)
   const props = returnProps(context, optionGroupDefinitions)
   return h(QOptionGroup, props)
 }

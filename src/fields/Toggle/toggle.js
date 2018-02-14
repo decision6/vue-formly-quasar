@@ -10,7 +10,7 @@ import { returnProps } from '../../common'
  * @return {Object}         vue component
  */
 export default (h, context) => {
-  const inputDefinitions = returnPlainObject(context.to.input)
+  const inputDefinitions = returnPlainObject(context.to.toggle)
   const props = returnProps(context, inputDefinitions)
   return h(QToggle, props)
 }

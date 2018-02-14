@@ -17,6 +17,10 @@ export default {
       <div class="col-md-6">
         <SelectType />
       </div>
+
+      <div class="col-md-6">
+        <OptionType />
+      </div>
     </div>
   </div>
 </template>

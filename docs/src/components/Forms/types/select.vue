@@ -2,7 +2,7 @@
 import TypesCard from '../support/types-card'
 
 export default {
-  name: 'InputType',
+  name: 'SelectType',
   components: { TypesCard },
   data: () => ({
     form: {},
