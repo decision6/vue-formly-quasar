@@ -1,9 +1,10 @@
 <script>
 import * as Types from './types'
+import CompleteExample from './CompleteExample.vue'
 
 export default {
   name: 'Forms',
-  components: { ...Types }
+  components: { ...Types, CompleteExample }
 }
 </script>
 
@@ -27,6 +28,10 @@ export default {
         <OthersType />
       </div>
     </div>
+
+    <br>
+
+    <CompleteExample />
   </div>
 </template>
 
