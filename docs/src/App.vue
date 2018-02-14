@@ -1,3 +1,27 @@
+<script>
+import {
+  QChip,
+  QLayout,
+  QToolbar,
+  QToolbarTitle
+} from 'quasar'
+
+import { version } from '../../package.json'
+
+export default {
+  name: 'App',
+  components: {
+    QChip,
+    QLayout,
+    QToolbar,
+    QToolbarTitle
+  },
+  data: () => ({
+    version
+  })
+}
+</script>
+
 <template>
   <!-- Don't drop "q-app" class -->
   <div id="q-app">
@@ -19,32 +43,23 @@
 
       <q-toolbar slot="footer" color="indigo-10">
         <p class="no-margin">
-          Developed by <a href="https://github.com/decision6" class="text-info"> Decision6 Team </a>
+          Developed by <a href="https://github.com/decision6" class="text-info" target="blanck"> Decision6 Team </a>
         </p>
+
+        <QChip small class="lib-version"> Version {{ version }} </QChip>
       </q-toolbar>
     </q-layout>
   </div>
 </template>
 
-<script>
-import {
-  QLayout,
-  QToolbar,
-  QToolbarTitle
-} from 'quasar'
-
-export default {
-  name: 'Root',
-  components: {
-    QLayout,
-    QToolbar,
-    QToolbarTitle
-  }
-}
-</script>
-
 <style scoped>
   .generic-margin {
     margin: 10px;
+  }
+
+  .lib-version {
+    position: absolute;
+    right: 12px;
+    bottom: 12px;
   }
 </style>
