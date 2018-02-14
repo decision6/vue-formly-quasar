@@ -10,6 +10,9 @@ export default {
 
 <template>
   <div class="forms">
+    <p>
+      For more information, <a href="https://github.com/decision6/vue-formly-quasar">see the docs</a>
+    </p>
     <h4> Examples of components </h4>
     <div class="row sm-gutter">
       <div class="col-md-6">

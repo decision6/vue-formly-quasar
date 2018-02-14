@@ -7,7 +7,8 @@ module.exports = {
     src: path.resolve(__dirname, '../src'),
     assets: path.resolve(__dirname, '../src/assets'),
     '@': path.resolve(__dirname, '../src/components'),
-    variables: path.resolve(__dirname, '../src/themes/quasar.variables.styl')
+    variables: path.resolve(__dirname, '../src/themes/quasar.variables.styl'),
+    // 'vue-formly-quasar': path.resolve(__dirname, '../../src') only dev
   },
 
   // Progress Bar Webpack plugin format
@@ -19,7 +20,7 @@ module.exports = {
 
   build: {
     env: require('./prod.env'),
-    publicPath: '',
+    publicPath: '/vue-formly-quasar/',
     productionSourceMap: false,
 
     // Remove unused CSS

@@ -13,8 +13,8 @@ require(`quasar/dist/quasar.${__THEME}.css`)
 import Vue from 'vue'
 import Quasar, { AddressbarColor } from 'quasar'
 import router from './router'
-import VueFormlyQuasar from '../../src'
-import VueFormly from '../../node_modules/vue-formly'
+import VueFormly from 'vue-formly'
+import VueFormlyQuasar from 'vue-formly-quasar'
 
 Vue.config.productionTip = false
 Vue.use(Quasar) // Install Quasar Framework
