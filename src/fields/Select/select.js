@@ -10,7 +10,7 @@ import { returnProps } from '../../common'
  * @return {Object}         vue component
  */
 export default (h, context) => {
-  const inputDefinitions = returnPlainObject(context.to.input)
-  const props = returnProps(context, inputDefinitions)
+  const selectDefinitions = returnPlainObject(context.to.select)
+  const props = returnProps(context, selectDefinitions)
   return h(QSelect, props)
 }

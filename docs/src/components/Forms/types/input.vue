@@ -83,6 +83,8 @@ export default {
 <template lang="html">
   <div class="input-type">
     <TypesCard title="Inputs components">
+      <pre><code>{{ model }}</code></pre>
+
       <formly-form :form="form" :model="model" :fields="fields" />
 
       <a href="#"> See component </a>

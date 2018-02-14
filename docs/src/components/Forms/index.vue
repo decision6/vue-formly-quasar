@@ -9,7 +9,15 @@ export default {
 
 <template>
   <div class="forms">
-    <InputType />
+    <div class="row sm-gutter">
+      <div class="col-md-6">
+        <InputType />
+      </div>
+
+      <div class="col-md-6">
+        <SelectType />
+      </div>
+    </div>
   </div>
 </template>
 

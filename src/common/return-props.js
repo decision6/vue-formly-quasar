@@ -14,7 +14,7 @@ const factoryEvent = (options, context) => {
     click: context.onClick
   }
 
-  return defaultsDeep({ }, defaultEvents, onProps)
+  return defaultsDeep({ }, onProps, defaultEvents)
 }
 
 const factoryProp = (options, context) => {
