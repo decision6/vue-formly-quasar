@@ -6,7 +6,10 @@
   "license": "MIT",
   "description": "A theme for Vue Formly using Quasar Components",
   "scripts": {
-    "build": "webpack"
+    "prepare": "rm -rf dist && npm run build",
+    "build": "webpack",
+    "docs:build": "cd docs; npm run build",
+    "docs:deploy": "cd docs; npm run build; npm run deploy"
   },
   "peerDependencies": {
     "quasar-framework": "^0.14.2",
