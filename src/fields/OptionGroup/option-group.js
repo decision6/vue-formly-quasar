@@ -3,7 +3,7 @@ import { returnPlainObject } from '../../helpers'
 import { returnProps } from '../../common'
 
 /**
- * Render a input component
+ * Render a option group component
  * @param  {Function} h     createElement function
  * @param  {Object} context
  * @param  {Object} item    vue component
