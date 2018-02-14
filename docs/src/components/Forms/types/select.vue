@@ -48,8 +48,6 @@ export default {
       <pre><code>{{ model }}</code></pre>
 
       <formly-form :form="form" :model="model" :fields="fields" />
-
-      <a href="#"> See component </a>
     </TypesCard>
   </div>
 </template>

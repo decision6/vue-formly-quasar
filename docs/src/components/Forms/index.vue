@@ -21,6 +21,10 @@ export default {
       <div class="col-md-6">
         <OptionType />
       </div>
+
+      <div class="col-md-6">
+        <OthersType />
+      </div>
     </div>
   </div>
 </template>
