@@ -166,6 +166,8 @@ export default {
 }
 ```
 
+[See the complete example and others](https://decision6.github.io/vue-formly-quasar/#/)
+
 ## FormlyForm component
 
 ### Properties
