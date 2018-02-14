@@ -1,4 +1,4 @@
-import { QCard, QCardTitle, QCardMain } from 'quasar-framework'
+import { QCard, QCardTitle, QCardMain, QCardSeparator } from 'quasar-framework'
 
 export default {
   functional: true,
@@ -15,6 +15,7 @@ export default {
       QCard,
       [
         h(QCardTitle, title),
+        h(QCardSeparator),
         h(QCardMain, [ ...context.slots().default ])
       ]
     )

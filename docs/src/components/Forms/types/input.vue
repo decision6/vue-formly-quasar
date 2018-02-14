@@ -8,7 +8,8 @@ export default {
     form: {},
     model: {
       name: '',
-      age: null
+      age: null,
+      country: ''
     },
     fields: [
       {
@@ -34,11 +35,43 @@ export default {
         },
         templateOptions: {
           field: {
-            'error-label': 'The name is required'
+            'error-label': 'Age can not be less than 0'
           },
           input: {
             type: 'number',
             'stack-label': 'Tell your age'
+          }
+        }
+      },
+      {
+        key: 'country',
+        type: 'autocomplete',
+        required: true,
+        templateOptions: {
+          field: {
+            'error-label': 'The country is required'
+          },
+          input: {
+            'stack-label': 'Type a country'
+          },
+          autocomplete: {
+            staticData: {
+              field: 'label',
+              list: [
+                {
+                  value: 'br',
+                  label: 'Brazil'
+                },
+                {
+                  value: 'fr',
+                  label: 'France'
+                },
+                {
+                  value: 'eua',
+                  label: 'United States'
+                }
+              ]
+            }
           }
         }
       }
@@ -51,6 +84,8 @@ export default {
   <div class="input-type">
     <TypesCard title="Inputs components">
       <formly-form :form="form" :model="model" :fields="fields" />
+
+      <a href="#"> See component </a>
     </TypesCard>
   </div>
 </template>
