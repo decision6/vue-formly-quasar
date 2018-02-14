@@ -9,6 +9,7 @@ export default {
 
 <template>
   <div class="forms">
+    <h4> Examples of components </h4>
     <div class="row sm-gutter">
       <div class="col-md-6">
         <InputType />
