@@ -8,6 +8,8 @@ module.exports = {
     assets: path.resolve(__dirname, '../src/assets'),
     '@': path.resolve(__dirname, '../src/components'),
     variables: path.resolve(__dirname, '../src/themes/quasar.variables.styl'),
+    'vue-formly': path.resolve(__dirname, '../../node_modules/vue-formly'),
+    'vue-formly-quasar': path.resolve(__dirname, '../../dist/vue-formly-quasar'),
     // 'vue-formly-quasar': path.resolve(__dirname, '../../src') only dev
   },
 
