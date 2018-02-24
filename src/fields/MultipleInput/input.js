@@ -40,7 +40,6 @@ const createInput = (h, props) => h(QInput, props)
  * Render a input component
  * @param  {Function} h     createElement function
  * @param  {Object} context
- * @param  {Object} item    vue component
  * @return {Object}         vue component
  */
 export default (h, context) => {

@@ -2,10 +2,10 @@ import { basedMixin } from '../../common'
 import Checkbox from './checkbox'
 
 export default {
-  name: 'checkbox',
+  name: 'q-formly-checkbox',
   mixins: [ basedMixin ],
   render (h) {
-    const option = this.to.checkbox.option
+    const option = this.to.checkbox
     return Checkbox(h, this, option)
   }
 }

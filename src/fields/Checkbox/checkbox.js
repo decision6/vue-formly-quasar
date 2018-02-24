@@ -2,7 +2,7 @@ import { QCheckbox } from 'quasar-framework'
 import { returnProps, optionValueToVal } from '../../common'
 
 /**
- * Render a radio component
+ * Render a checkbox component
  * @param  {Function} h     createElement function
  * @param  {Object} context
  * @param  {Object} item    vue component

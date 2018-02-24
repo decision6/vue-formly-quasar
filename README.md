@@ -11,7 +11,11 @@ The plugin depends:
 + [Vue Formly](https://github.com/formly-js/vue-formly)
 + [Quasar](http://quasar-framework.org/guide/)
 
-## Install plugin
+## Install
+
+```bash
+yarn add vue-formly vue-formly-quasar
+```
 
 On `main.js` on Quasar template:
 
@@ -22,29 +26,26 @@ import Vue from 'vue'
 import Quasar from 'quasar'
 import VueFormly from 'vue-formly'
 import VueFormlyQuasar from 'vue-formly-quasar'
-import QFormly from 'q-formly'
 
 // Install plugins
 Vue.use(Quasar)
 Vue.use(VueFormly)
 Vue.use(VueFormlyQuasar)
-Vue.use(QFormly)
 
 // code below
 ```
 
-It's very important that `VueFormly` plugin has been install before `VueFormly` plugin.
+It's very important that `VueFormly` plugin has been install before `VueFormlyQuasar` plugin.
 
 ## Usage
 
 On template
 
 ```html
-<q-formly
-  :confirmButton="confirmButton"
+<formly-form
   :model="model"
   :fields="fields"
-  @submit="submitForm"></q-formly>
+  :form="form" />
 ```
 
 On script tag
@@ -53,16 +54,14 @@ On script tag
 export default {
   data () {
     return {
-      confirmButton: {
-        text: 'Save'
-      },
+      form: {},
       model: {
         firstName: '',
         lastName: '',
         age: 1,
         genre: 'M',
         toggle: true,
-        select: 'goog'
+        select: 'go'
       },
       fields: [
         {
@@ -103,7 +102,7 @@ export default {
           templateOptions: {
             field: {
               icon: 'person',
-              helper: 'Agr must be beetwen 1 and 100 years old',
+              helper: 'Age must be beetwen 1 and 100 years old',
               'error-label': 'Age invalid'
             },
             input: {
@@ -119,21 +118,22 @@ export default {
           type: 'option-group',
           templateOptions: {
             field: {
-              label: 'Defina o gênero',
-              'label-width': 3
+              icon: 'person'
             },
-            type: 'radio',
-            inline: true,
-            options: [
-              {
-                value: 'M',
-                label: 'Masculino'
-              },
-              {
-                value: 'F',
-                label: 'Feminino'
-              }
-            ]
+            option_group: {
+              type: 'radio',
+              inline: true,
+              options: [
+                {
+                  value: 'M',
+                  label: 'Male'
+                },
+                {
+                  value: 'F',
+                  label: 'Female'
+                }
+              ]
+            }
           }
         },
         {
@@ -141,16 +141,16 @@ export default {
           type: 'select',
           templateOptions: {
             field: {
-              label: 'Trabalha no(a)',
-              'label-width': 3
+              icon: 'business'
             },
-            input: {
+            select: {
+              'float-label': 'Works at',
               color: 'secondary',
               inverted: true,
               options: [
                 {
                   label: 'Google',
-                  value: 'goog'
+                  value: 'go'
                 },
                 {
                   label: 'Facebook',
@@ -166,116 +166,55 @@ export default {
 }
 ```
 
-## QFormly component
+[See the complete example and others](https://decision6.github.io/vue-formly-quasar/#/)
+
+## FormlyForm component
 
 ### Properties
 
-| Property |  Type  | Required |                    Description                    |
-|:--------:|:------:|:--------:|:-------------------------------------------------:|
-|   model  | Object |   true   | Form model                                        |
-|  fields  |  Array |   true   | An array of objects with each field on your form. |
-
-### Methods
-
-The event emited on `q-formly` is `submit`, with `model` value.
+| Property |  Type  | Required |                                  Description                                 |
+|:--------:|:------:|:--------:|:----------------------------------------------------------------------------:|
+|   model  | Object |    yes   |                                  Form model                                  |
+|  fields  |  Array |    yes   |               An array of objects with each field on your form.              |
+|   form   | Object |    yes   | An empty object that will be populated with control information by component |
 
 ### Fields array
 
-The fields array is the same key present on vue-formly interface. [Complete documentation are here](https://matt-sanders.gitbooks.io/vue-formly/content/v/2.0/how_to_use/properties_and_options.html). Remember that `form` property is not necessary on `q-formly` component.
+The fields array is the same key present on vue-formly interface. [Complete documentation are here](https://matt-sanders.gitbooks.io/vue-formly/content/v/2.0/how_to_use/properties_and_options.html)
 
-### templateOptions key on input, toggle, range and select keys
+Each field has at least two properties in the root of the templateOptions object: **field** and **name of the input type**. For the last, the name of key will be Quasar inputs. The component support the follow components:
 
-+ **field**: an options object for [QField component](http://quasar-framework.org/components/field.html).
+- input;
+- select;
+- range;
+- datetime;
+- option group;
+- checkbox;
+- radio;
+- toogle;
+- autocomplete;
 
-+ **input**: an options objetc for each Quasar component.
-
-#### Example
-
-```js
-{
-  // options to vue-formly
-  key: 'firstName',
-  type: 'input',
-  required: true,
-  // options to each component
-  templateOptions: {
-    // options to QField
-    field: {
-      icon: 'person',
-      'error-label': 'The person name is invalid'
-    },
-    // options to QInput, QSelect, QRange and QToggle
-    input: {
-      'float-label': 'First name',
-      type: 'text'
-    }
-  }
-}
-```
-
-### templateOptions for QOptionGroup component
-
-+ **field**: the same that was presented before
-
-The other properties will be inject in the component except the field property.
-
-#### Example
+To be clearer, follow the diagram below:
 
 ```js
-{
-  key: 'genre',
-  type: 'option-group',
-  templateOptions: {
-    // options to QField component
-    field: {
-      label: 'Defina o gênero',
-      'label-width': 3
-    },
-    // options to QOptionGroup component
-    type: 'radio',
-    inline: true,
-    options: [
-      {
-        value: 'M',
-        label: 'Masculino'
+const fields = [
+  {
+    key: 'name', // name from key on model object
+    type: 'input', // formly type
+    templateOptions: {
+      // bind to QField component
+      field: {
+        'error-message': 'The name is invalid'
       },
-      {
-        value: 'F',
-        label: 'Feminino'
+
+      // bind to Quasar component. The key name can be:
+      // - input, toogle, radio, checkbox;
+      // - autocomplete, datetime, option_group
+      // - select and range
+      input: {
+        'float-label': 'Type your name'
       }
-    ]
-  }
-}
-```
-
-### templateOptions for input multiple
-
-+ **field**: the same that was presented before
-+ **input**: the properties for `QInput` element
-
-The difference is on `model`. For this field type, is necessary that key has an array of strings. Seja para inputs do tipo text, number, password, não importa.
-
-#### Example
-
-```js
-// on model object
-model: {
-  // ...
-  emails: [ 'examplemail@test.com' ]
-}
-
-// on fields array
-{
-  key: 'emails',
-  type: 'multiple-input',
-  templateOptions: {
-    field: {
-      label: 'Emails for list',
-      'label-width': 3
-    },
-    input: {
-      type: 'email'
     }
   }
-}
+]
 ```

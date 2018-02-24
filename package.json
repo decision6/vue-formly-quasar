@@ -6,7 +6,10 @@
   "license": "MIT",
   "description": "A theme for Vue Formly using Quasar Components",
   "scripts": {
-    "build": "./node_modules/.bin/webpack"
+    "prepare": "rm -rf dist && npm run build",
+    "build": "webpack",
+    "docs:build": "cd docs; npm run build",
+    "docs:deploy": "cd docs; npm run build; npm run deploy"
   },
   "peerDependencies": {
     "quasar-framework": "^0.14.2",
@@ -24,6 +27,9 @@
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-preset-env": "^1.6.1",
     "eslint-loader": "^1.9.0",
+    "quasar-framework": "^0.14.9",
+    "vue": "^2.5.13",
+    "vue-formly": "^2.5.7",
     "vue-loader": "^13.0.4",
     "webpack": "^3.5.6"
   }
