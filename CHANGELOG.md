@@ -2,6 +2,9 @@
 
 All notable changes to this project will be documented in this file.
 
+## [2.0.0] - 2018-02-24
+- [ new ] upgrade to 2.0.0 version. View the README to more informations
+
 ## [1.4.0] - 2018-02-08
 
 - [ upgrade ] babel
