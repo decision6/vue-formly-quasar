@@ -1,6 +1,6 @@
 {
   "name": "@decision6/vue-formly-quasar",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "main": "dist/vue-formly-quasar.js",
   "author": "D6 Team <tecnologia@decision6.com>",
   "license": "MIT",
@@ -9,7 +9,7 @@
     "prepare": "rm -rf dist && npm run build",
     "build": "webpack",
     "docs:build": "cd docs; npm run build",
-    "docs:deploy": "cd docs; npm run build; npm run deploy"
+    "docs:deploy": "npm run build; cd docs; npm run build; npm run deploy"
   },
   "peerDependencies": {
     "quasar-framework": "^0.14.2",

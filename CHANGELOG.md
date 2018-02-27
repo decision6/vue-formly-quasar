@@ -2,6 +2,9 @@
 
 All notable changes to this project will be documented in this file.
 
+## [2.1.1] - 2018-02-27
+- [ update ] .npmignore
+
 ## [2.1.0] - 2018-02-24
 - [ fix ] main on package.json
 
