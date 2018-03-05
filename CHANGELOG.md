@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## [2.2.0] - 2018-03-05
+- [ fix ]    big bundlers
+- [ update ] `main` configuration on `package.json`
+
 ## [2.1.1] - 2018-02-27
 - [ update ] .npmignore
 
