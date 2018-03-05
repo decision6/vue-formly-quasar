@@ -1,7 +1,7 @@
 {
   "name": "@decision6/vue-formly-quasar",
   "version": "2.1.1",
-  "main": "dist/vue-formly-quasar.js",
+  "main": "dist/vue-formly-quasar.min.js",
   "author": "D6 Team <tecnologia@decision6.com>",
   "license": "MIT",
   "description": "A theme for Vue Formly using Quasar Components",

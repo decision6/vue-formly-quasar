@@ -7,6 +7,11 @@ const banner = 'VueFormlyQuasar v' + version + '\n' +
                'Released under the MIT License.'
 
 const common = {
+  externals: {
+    lodash: 'lodash',
+    'quasar-framework': 'quasar-framework',
+    ramda: 'ramda'
+  },
   module: {
     rules: [
       {
@@ -46,6 +51,7 @@ module.exports = [
       library: 'VueFormlyQuasar',
       libraryTarget: 'umd'
     },
+    externals: common.externals,
     module: common.module,
     plugins: [
       ...common.plugins,
@@ -65,6 +71,7 @@ module.exports = [
       library: 'VueFormlyQuasar',
       libraryTarget: 'umd'
     },
+    externals: common.externals,
     module: common.module,
     plugins: [
       ...common.plugins,
