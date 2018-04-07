@@ -1,6 +1,6 @@
 {
   "name": "@decision6/vue-formly-quasar",
-  "version": "2.2.0",
+  "version": "3.0.0",
   "main": "dist/vue-formly-quasar.min.js",
   "author": "D6 Team <tecnologia@decision6.com>",
   "license": "MIT",
