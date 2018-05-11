@@ -17,8 +17,8 @@
     "vue-formly": "^2.5.7"
   },
   "dependencies": {
-    "lodash": "^4.17.4",
-    "ramda": "^0.24.1"
+    "lodash": "^4.17.10",
+    "ramda": "^0.25.0"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
