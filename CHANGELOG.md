@@ -2,6 +2,9 @@
 
 All notable changes to this project will be documented in this file.
 
+## [3.1.0] - 2018-05-11
+- [ new ] added QEditor component
+
 ## [3.0.0] - 2018-03-07
 - [ update ] peer dependences to:
   - Quasar: 0.15.x
