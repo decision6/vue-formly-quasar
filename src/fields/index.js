@@ -8,16 +8,18 @@ import toggle from './Toggle'
 import select from './Select'
 import multipleInput from './MultipleInput'
 import datetime from './DateTime'
+import editor from './Editor'
 
 export default {
-  autocomplete,
-  input,
   radio,
-  checkbox,
   range,
+  input,
   toggle,
+  editor,
   select,
   datetime,
+  checkbox,
+  autocomplete,
   'option-group': optiongroup,
   'multiple-input': multipleInput
 }
