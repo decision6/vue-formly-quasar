@@ -1,4 +1,4 @@
-import { QAutocomplete } from 'quasar-framework'
+import { QAutocomplete } from 'quasar'
 
 export default {
   name: 'QAutocomplete',

@@ -1,4 +1,4 @@
-import { QField } from 'quasar-framework'
+import { QField } from 'quasar'
 import { returnPlainObject } from '../helpers'
 
 /**

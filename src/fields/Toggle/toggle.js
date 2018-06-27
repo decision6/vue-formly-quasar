@@ -1,4 +1,4 @@
-import { QToggle } from 'quasar-framework'
+import { QToggle } from 'quasar'
 import { returnPlainObject } from '../../helpers'
 import { returnProps } from '../../common'
 

@@ -1,4 +1,4 @@
-import { QRadio } from 'quasar-framework'
+import { QRadio } from 'quasar'
 import { returnProps, optionValueToVal } from '../../common'
 
 /**

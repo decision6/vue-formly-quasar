@@ -1,4 +1,4 @@
-import { QRange } from 'quasar-framework'
+import { QRange } from 'quasar'
 import { returnPlainObject } from '../../helpers'
 import { returnProps } from '../../common'
 

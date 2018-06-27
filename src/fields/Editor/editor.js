@@ -1,4 +1,4 @@
-import { QEditor } from 'quasar-framework'
+import { QEditor } from 'quasar'
 import { returnPlainObject } from '../../helpers'
 import { returnProps } from '../../common'
 

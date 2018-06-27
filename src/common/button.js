@@ -1,4 +1,4 @@
-import { QBtn } from 'quasar-framework'
+import { QBtn } from 'quasar'
 import { defaultsDeep } from 'lodash'
 
 /**

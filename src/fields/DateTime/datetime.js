@@ -1,4 +1,4 @@
-import { QDatetime } from 'quasar-framework'
+import { QDatetime } from 'quasar'
 import { returnPlainObject } from '../../helpers'
 import { returnProps } from '../../common'
 

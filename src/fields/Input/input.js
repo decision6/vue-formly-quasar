@@ -1,4 +1,4 @@
-import { QInput } from 'quasar-framework'
+import { QInput } from 'quasar'
 import { returnPlainObject } from '../../helpers'
 import { returnProps } from '../../common'
 

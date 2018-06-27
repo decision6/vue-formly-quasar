@@ -1,4 +1,4 @@
-import { QOptionGroup } from 'quasar-framework'
+import { QOptionGroup } from 'quasar'
 import { returnPlainObject } from '../../helpers'
 import { returnProps } from '../../common'
 
