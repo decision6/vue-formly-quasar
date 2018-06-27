@@ -2,6 +2,9 @@
 
 All notable changes to this project will be documented in this file.
 
+## [4.1.0] - 2018-06-27
+- fix external configuration
+
 ## [4.0.0] - 2018-06-27
 - update to Quasar 0.16
 - update `quasar-framework` references to `quasar`
