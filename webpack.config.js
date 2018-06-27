@@ -9,7 +9,7 @@ const banner = 'VueFormlyQuasar v' + version + '\n' +
 const common = {
   externals: {
     lodash: 'lodash',
-    quasar: 'quasar-framework',
+    quasar: 'quasar',
     ramda: 'ramda'
   },
   module: {
